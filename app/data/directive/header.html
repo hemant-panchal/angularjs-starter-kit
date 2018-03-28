@@ -1,0 +1,25 @@
+<script>
+function toggleNav(){
+  document.getElementById("mySidenav").classList.toggle("widthClass");
+  document.getElementById("ham-container").classList.toggle("change");
+}
+</script>
+
+<div id="mySidenav" class="sidenav">
+  <div class="closeDiv">
+    <a href="javascript:void(0)" class="closebtn" onclick="toggleNav()">&times;</a>
+  </div>
+  <a onclick="toggleNav()" ui-sref-active="active" ui-sref="manager"><i class="fa fa-user-plus"></i>&nbsp; Pending Review</a>
+  <a onclick="toggleNav()" ui-sref-active="active" ui-sref="selfReview"><i class="fa fa-edit"></i>&nbsp; Self Review</a>
+  <a onclick="toggleNav()" ui-sref-active="active" ui-sref="allList"> <i class="fa fa-list"></i>&nbsp; Employee Reviewed By You</a>
+  <!-- <a onclick="toggleNav()" ui-sref-active="active" ui-sref="empList"> <i class="fa fa-list-alt"></i>&nbsp; Employee Self Reviewed</a> -->
+  <a onclick="toggleNav()" ui-sref-active="active"  ng-click="logout()"> <i class="fa fa-power-off"></i>&nbsp; Logout</a>
+</div>
+<div class="logo">
+  <div id="ham-container" class="ham-container" onclick="toggleNav()">
+    <div class="bar1"></div>
+    <div class="bar2"></div>
+    <div class="bar3"></div>
+  </div>
+  <img src="main/images/affordplanRecieptlogo.png" alt="">
+</div>
